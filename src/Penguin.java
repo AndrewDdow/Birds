@@ -5,9 +5,10 @@ public class Penguin extends Bird{
     private final Random ChooseName = new Random();
     public Penguin() {
         System.out.println("I'm a penguin");
-        this.setName(Names[ChooseName.nextInt(Names.length)]);
+        setName(Names[ChooseName.nextInt(Names.length)]);
+        sayName(this.name);
     }
-    //@Override 
+    //@Override
     public void fly(){
         System.out.println("I can't fly");
     }

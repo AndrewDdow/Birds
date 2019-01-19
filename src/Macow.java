@@ -8,6 +8,7 @@ public class Macow extends Bird{
 //        this.name = "Kesha";
         System.out.println("I'm a macow");
         this.setName(Names[ChooseName.nextInt(Names.length)]);
+        sayName(this.name);
     }
     public Macow(String name){
         this.name = name;
