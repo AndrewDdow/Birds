@@ -32,7 +32,6 @@ public class Drawer extends JFrame{
     public void drawBird(Bird bird) {
         if (bird.getClass() == this.bird.getClass()) {
             JLabel img = new JLabel(birdImage);
-            JLabel name = new JLabel(bird.getName());
             Random randomX = new Random();
             Random randomY = new Random();
             int x = randomX.nextInt(5); 
@@ -43,11 +42,9 @@ public class Drawer extends JFrame{
             }
             if (windowSize[0] < x) windowSize[0] = x;
             if (windowSize[1] < y) windowSize[1] = y;
-            img.setBounds(x * (30 + birdImage.getIconWidth()), y * (birdImage.getIconHeight() + 40), birdImage.getIconWidth(), birdImage.getIconHeight());
-            name.setBounds(x * (30 + birdImage.getIconWidth()) + 40, y * (birdImage.getIconHeight() + 40) + birdImage.getIconHeight() + 8, birdImage.getIconWidth(), 20);
+            img.setBounds(x * (30 + birdImage.getIconWidth()), y * (birdImage.getIconHeight() + 20), birdImage.getIconWidth(), birdImage.getIconHeight());
             plane[x][y] = 1;
             add(img);
-            add(name);
             setSize((birdImage.getIconWidth() + 30) * (1 + windowSize[0]), (birdImage.getIconHeight() + 45) * (windowSize[1] + 1));
         } else {
             System.out.println("There's no place for this kind of birds.");
